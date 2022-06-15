@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\Sign_inController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +16,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/registre',[RegisterController::class,'index'])->name('registre');
+Route::post('/registre',[RegisterController::class,'add_user'])->name('registre');
+
+Route::get('/sign_in',[Sign_inController::class,'index'])->name('sign_in');
+Route::post('/sign_in',[Sign_inController::class,'store'])->name('sign_in');
+
+
+
 Route::get('/', function () {
     return view('dushboard');
 });
-Route::get('/registre', function () {
-    return view('registre');
-});
+// Route::get('/registre', function () {
+//     return view('registre');
+// });
 
-Route::get('/sign_in', function () {
-    return view('sign_in');
-});
+// Route::get('/sign_in', function () {
+//     return view('sign_in');
+// });

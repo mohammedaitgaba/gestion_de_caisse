@@ -3,8 +3,8 @@
 <div class=" flex flex-col items-center ">
     <h1 class="text-4xl mt-20 mb-6 ">Rejoignez-nous</h1>
     <div class="registration_form w-5/12 bg-white p-7 rounded-lg" >
-        {{-- <form action="{{route('register')}}" method="POST" class="flex flex-col items-center"> --}}
-        <form method="POST" class="flex flex-col items-center">
+        <form action="{{route('registre')}}" method="POST" class="flex flex-col items-center">
+        {{-- <form method="POST" class="flex flex-col items-center"> --}}
             @csrf
            <div class="grid grid-cols-2 gap-4 w-full">
 
@@ -51,7 +51,7 @@
                     class="bg-gray-100 border-2 w-50 p-2 rounded-lg " value="">  
                 </div>
            </div>
-           <button type="submit" class="bg-primary text-white p-3 w-60 rounded-lg  hover:bg-secondary">login</button>
+           <button type="submit" class="bg-primary text-white p-3 w-60 rounded-lg  hover:bg-secondary">Créer un compte!</button>
            <div class="login_link"><a href=" /sign_in "> Vous avez déjà un compte! </a></div>
 
         </form>
