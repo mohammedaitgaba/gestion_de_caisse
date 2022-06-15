@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 
 class Sign_inController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware(['guest']);
-    // }
+    public function __construct()
+    {
+        $this->middleware(['guest']);
+    }
     public function index(){
        
-        return view('sign_in');
+        return view('auth.sign_in');
     }
     public function store(Request $request){
         $this->validate($request,[

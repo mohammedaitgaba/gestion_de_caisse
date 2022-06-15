@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Sign_inController;
+use App\Http\Controllers\LogoutController;
+
 
 
 /*
@@ -21,6 +23,8 @@ Route::post('/registre',[RegisterController::class,'add_user'])->name('registre'
 
 Route::get('/sign_in',[Sign_inController::class,'index'])->name('sign_in');
 Route::post('/sign_in',[Sign_inController::class,'store'])->name('sign_in');
+
+Route::get('/logout',[LogoutController::class,'store'])->name('logout');
 
 
 

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('libelle');
             $table->enum('caisse_type',["recette","depense"]);
             $table->decimal('caisse', 10, 2);
+            $table->decimal('solde', 10, 2);
             $table->date('date');
             $table->timestamps();
         });
