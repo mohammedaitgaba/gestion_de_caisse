@@ -21,6 +21,9 @@
                 <a href="" class="p-3 " >{{auth()->user()->nom}} {{auth()->user()->prenom}}</a>
             </li>
             <li>
+                <a href=" {{route('dushboard')}} " class="p-3 " >Dushboard</a>
+            </li>
+            <li>
                 <a href=" {{route('add_transaction')}} " class="pt-2 pl-3 pr-3 pb-2 bg-primary text-white p-3  rounded-full  hover:bg-secondary ease-in-out duration-300 ">Ajouter record</a>
                 <a href="{{route('logout')}}" class="pt-2 pl-3 pr-3 pb-2 bg-primary text-white p-3 w-60 rounded-full  hover:bg-secondary ease-in-out duration-300 ">Logout</a>
             </li>
