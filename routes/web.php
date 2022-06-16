@@ -22,6 +22,9 @@ use App\Http\Controllers\TransactionsController;
 Route::get('/add_transaction',[TransactionsController::class,'add'])->name('add_transaction');
 Route::post('/add_transaction',[TransactionsController::class,'store'])->name('add_transaction');
 Route::get('/',[TransactionsController::class,'index'])->name('dushboard');
+Route::get('/edit/{id}', [TransactionsController::class,'edit'])->name('edit');
+
+Route::put('/transactions/{transaction}',[TransactionsController::class,'update'])->name('update');
 Route::delete('/delete/{transaction}',[TransactionsController::class,'delete'])->name('delete');
 
 

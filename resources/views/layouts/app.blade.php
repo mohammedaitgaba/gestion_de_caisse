@@ -44,6 +44,7 @@
     @yield('registre')
     @yield('sign_in')
     @yield('add_transaction')
+    @yield('update_transaction')
 
     <script src="../path/to/flowbite/dist/flowbite.js"></script>
     <script src=" {{asset('js/nav.js')}} "></script>
