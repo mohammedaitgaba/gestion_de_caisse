@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Transactions extends Model
 {
     use HasFactory;
+    protected $table = 'transactions';
+    protected $fillable = ['label', 'type', 'transaction_amount', 'balance'];
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Sign_inController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\TransactionsController;
 
 
 
@@ -18,6 +19,12 @@ use App\Http\Controllers\LogoutController;
 |
 */
 
+Route::get('/add_transaction',[TransactionsController::class,'add'])->name('add_transaction');
+Route::post('/add_transaction',[TransactionsController::class,'store'])->name('add_transaction');
+Route::get('/',[TransactionsController::class,'index'])->name('dushboard');
+Route::delete('/delete/{transaction}',[TransactionsController::class,'delete'])->name('delete');
+
+
 Route::get('/registre',[RegisterController::class,'index'])->name('registre');
 Route::post('/registre',[RegisterController::class,'add_user'])->name('registre');
 
@@ -28,9 +35,7 @@ Route::get('/logout',[LogoutController::class,'store'])->name('logout');
 
 
 
-Route::get('/', function () {
-    return view('dushboard');
-});
+
 // Route::get('/registre', function () {
 //     return view('registre');
 // });
